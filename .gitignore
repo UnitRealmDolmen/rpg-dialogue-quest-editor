@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / editor cruft
+.idea/
+.vscode/
+*.swp
+
+# Quest/dialogue editor runtime artifacts
+.compiled/
+*.rpgq.bin
+*.rpgq.bak
+exports/*.tmp
+logs/*.log
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS junk
+Thumbs.db
+.DS_Store
