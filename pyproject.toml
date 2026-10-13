@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpg-dialogue-quest-editor"
+version = "0.6.3"
+description = "Desktop dialogue tree and quest graph editor for RPGs, with engine export adapters."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.12"
+authors = [{ name = "rpg-dq-editor maintainers" }]
+dependencies = [
+    "pydantic>=2.7,<3",
+    "PySide6>=6.7,<7",
+    "rich>=13.7,<14",
+    "networkx>=3.3,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-qt>=4.4",
+    "mypy>=1.10",
+    "ruff>=0.5",
+    "black>=24.4",
+]
+
+[project.scripts]
+rpg-dq-editor = "rpg_dq_editor.app.bootstrap:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/rpg_dq_editor/services", "src/rpg_dq_editor/models"]
